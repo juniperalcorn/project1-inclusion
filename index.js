@@ -1,4 +1,4 @@
-const http = requpre('http')
+const http = require('http')
 const express = require('express')
 const MessagingResponse = require('twilio').twiml.MessagingResponse
 
@@ -15,7 +15,7 @@ app.post('/sms', (req, res) =>{
 })
 
 http.createServer(app).listen(3001, () =>{
-    console.log('Express server listening on porn 3001')
+    console.log('Express server listening on port 3001')
 })
 
 
@@ -23,6 +23,6 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
   });
 
-app.listen(3000, function(){
-    console.log('Restaurant bot listening on Port 3000!')
-})
+// app.listen(3000, function(){
+//     console.log('Restaurant bot listening on Port 3000!')
+// })
