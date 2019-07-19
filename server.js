@@ -22,7 +22,3 @@ http.createServer(app).listen(3001, () =>{
 app.get('/', function (req, res) {
     res.send('Hello World!');
   });
-
-// app.listen(3000, function(){
-//     console.log('Restaurant bot listening on Port 3000!')
-// })
