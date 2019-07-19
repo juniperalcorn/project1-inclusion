@@ -8,15 +8,15 @@ const db = new Sequelize({
 });
 
 const Reservations = db.define('reservations', {
-    image: {
+    restaurant: {
         type: Sequelize.STRING,
         field: 'restaurant'
     },
-    description: {
+    date: {
         type: Sequelize.DATEONLY,
         field: 'date'
     },
-    street: {
+    time: {
         type: Sequelize.DATE,
         field: 'time'
     },

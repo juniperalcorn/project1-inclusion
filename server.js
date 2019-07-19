@@ -19,6 +19,23 @@ http.createServer(app).listen(3001, () =>{
 })
 
 
-app.get('/', function (req, res) {
-    res.send('Hello World!');
-  });
+// app.get('/', function (req, res) {
+//     res.send('Hello World!');
+//   });
+
+
+  //import models
+  const { Name, Reservations } = require('./models')
+
+  app.get('/', async (req, res) => {
+    try {
+      const res = await Reservations.findAll({ raw: true })
+      res.json({
+        reservations
+      })
+    } catch (e) {
+      res.status(500).json({
+        message: e.message
+      })
+    }
+  })
